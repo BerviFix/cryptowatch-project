@@ -38,8 +38,14 @@
                 <h1>Top 100 Currency</h1>
                 <div class="top_currency">
                     <div class="currency_card" v-for="crypto in cryptoCurrency">
-                        <img :src="crypto.logo_url" alt="currency_logo" width="50px">
+                        <section class="currency_logo">
+                            <img :src="crypto.logo_url" alt="currency_logo" width="100%" height="100%">
+                        </section>
                         
+                        <h4>
+                            {{crypto.rank}}
+                        </h4>
+
                         <h4>
                             {{crypto.name}}
                         </h4>
