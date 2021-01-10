@@ -46,7 +46,7 @@ var app = new Vue({
                     self.cryptoCurrency = result.data;
                     console.log(self.cryptoCurrency);
                 });
-        }, 10000)
+        }, 3000)
     },
 })
 
