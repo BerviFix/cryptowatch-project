@@ -23,6 +23,7 @@ var app = new Vue({
                     convert: 'EUR',
                     'per-page': '100',
                     page: '1',
+                    sort: 'rank',
                 }
             })
             .then(function (result) {
@@ -40,6 +41,7 @@ var app = new Vue({
                         convert: 'EUR',
                         'per-page': '100',
                         page: '1',
+                        sort: 'rank',
                     }
                 })
                 .then(function (result) {

@@ -17,10 +17,29 @@ header {
   height: 80px;
   padding-left: 1%;
   background-color: black;
+  overflow: hidden;
 }
 
 header h1 {
   padding-left: 1%;
+}
+
+#github_ref {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-left: auto;
+  transform: rotate(25deg);
+}
+#github_ref a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+#github_ref i {
+  font-size: 40px;
+  animation: jittery 4s infinite;
 }
 
 .looping_carousel {
@@ -98,4 +117,40 @@ main {
 
 .credits span i {
   color: #e74c3c;
+}
+
+/* animation */
+@keyframes jittery {
+  5%,
+  50% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(0.9);
+  }
+
+  15% {
+    transform: scale(1.15);
+  }
+
+  20% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+
+  25% {
+    transform: scale(1.15) rotate(5deg);
+  }
+
+  30% {
+    transform: scale(1.15) rotate(-3deg);
+  }
+
+  35% {
+    transform: scale(1.15) rotate(2deg);
+  }
+
+  40% {
+    transform: scale(1.15) rotate(0);
+  }
 }
