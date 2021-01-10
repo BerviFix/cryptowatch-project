@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.js"
+    integrity="sha512-bYkaBWaFtfPIMYt9+CX/4DWgfrjcHinjerNYxQmQx1VM76eUsPPKZa5zWV8KksVkBF/DaHSADCwil2J5Uq2ctA=="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Crypto Project</title>
+</head>
+<body>
+    
+    <div id="app">
+        <header>
+            <img src="https://i.ibb.co/3SN5Tw5/Livello-2.png" alt="logo" width="70px">
+            <h1>CryptoWatch</h1>
+        </header>
+
+        <section class="looping_carousel">
+            <marquee>
+                <div v-for="crypto in cryptoCurrency">
+                    <h4>{{crypto.currency}} 
+                        <span>Price:</span>
+                        <span>{{crypto.price}}</span> 
+                        <span><i class="fas fa-euro-sign"></i></span>
+                        <span><i class="far fa-dot-circle"></i></span>
+                    </h4>
+                </div>
+            </marquee>
+        </section>
+
+        <main>
+            <div class="homepage_currency">
+                <h1>Top 100 Currency</h1>
+                <div class="top_currency">
+                    <div class="currency_card" v-for="crypto in cryptoCurrency">
+                        <img :src="crypto.logo_url" alt="currency_logo" width="50px">
+                        
+                        <h4>
+                            {{crypto.currency}}
+                        </h4>
+                        
+                        <p>
+                            {{crypto.price}} 
+                            <span><i class="fas fa-euro-sign"></i></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="credits">
+                <h4>Made with <span><i class="fas fa-heart"></i></span> by BerviFix</h4>
+            </div class="credits">
+        </main>
+
+        
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
