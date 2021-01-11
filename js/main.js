@@ -28,7 +28,6 @@ var app = new Vue({
             })
             .then(function (result) {
                 self.cryptoCurrency = result.data;
-                console.log(self.cryptoCurrency);
             });
 
         setInterval(function () {
@@ -46,7 +45,6 @@ var app = new Vue({
                 })
                 .then(function (result) {
                     self.cryptoCurrency = result.data;
-                    console.log(self.cryptoCurrency);
                 });
         }, 3000)
     },
